@@ -7,9 +7,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./screens/LoginScreen";
 import MapScreen from "./screens/MapScreen";
+import TabNavigator from "./navigation/TabNavigator";
 
 const Stack = createNativeStackNavigator();
-const Bottom = createBottomTabNavigator();
 
 export default function App() {
   return (
@@ -20,7 +20,7 @@ export default function App() {
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Map" component={MapScreen} />
+        <Stack.Screen name="Map" component={TabNavigator} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>

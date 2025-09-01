@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
 import EnterButton from "../components/EnterButton";
 import LoginInput from "../components/LoginInput";
-import ToggleSwitch from "../components/Switch";
 
 function LoginScreen() {
   return (
@@ -11,7 +10,6 @@ function LoginScreen() {
       <LoginInput insidePlaceholder={"email"}></LoginInput>
       <LoginInput insidePlaceholder={"password"}></LoginInput>
       <EnterButton destination={"MainApp"}></EnterButton>
-      <ToggleSwitch></ToggleSwitch>
     </View>
   );
 }
