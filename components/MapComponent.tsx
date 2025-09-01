@@ -1,14 +1,16 @@
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-import ToggleSwitch from "../components/Switch";
+import ToggleButton from "../components/ToggleButton";
 import { StyleSheet, View } from "react-native";
+import React, { useState } from "react";
 
-function Map() {
+function MapComponent() {
+  const [isOnScreen, setIsOnScreen] = useState(true); // état partagé
   return (
     <View style={styles.container}>
       <MapView
         style={styles.map}
         provider={PROVIDER_GOOGLE}
-        showsUserLocation
+        showsUserLocation={isOnScreen}
         initialRegion={{
           latitude: 48.866667,
           longitude: 2.333333,
@@ -17,7 +19,7 @@ function Map() {
         }}
       />
       <View style={styles.toggle}>
-        <ToggleSwitch />
+        <ToggleButton isOnScreen={isOnScreen} setIsOnScreen={setIsOnScreen} />
       </View>
     </View>
   );
@@ -25,10 +27,10 @@ function Map() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // occupe tout l’écran
+    flex: 1,
   },
   map: {
-    flex: 1, // la map occupe tout l’espace du parent
+    flex: 1,
   },
   toggle: {
     position: "absolute",
@@ -37,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Map;
+export default MapComponent;

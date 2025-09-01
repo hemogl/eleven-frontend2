@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, Image, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import EnterButton from "../components/EnterButton";
 import LoginInput from "../components/LoginInput";
 

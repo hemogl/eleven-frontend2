@@ -1,6 +1,5 @@
-import MapView from "react-native-maps";
 import { StyleSheet } from "react-native";
-import MapComponent from "../components/Map";
+import MapComponent from "../components/MapComponent";
 
 function MapScreen() {
   return <MapComponent></MapComponent>;

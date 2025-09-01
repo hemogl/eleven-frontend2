@@ -1,12 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import SettingsButton from "./components/SettingsButton";
-import LoginInput from "./components/LoginInput";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./screens/LoginScreen";
-import MapScreen from "./screens/MapScreen";
 import TabNavigator from "./navigation/TabNavigator";
 
 const Stack = createNativeStackNavigator();
