@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Switch, StyleSheet } from "react-native";
+import { dark } from "../colorPalet";
 
 const ToggleButton = ({ isOnScreen, setIsOnScreen }) => {
   const toggle = () => {
@@ -13,7 +14,7 @@ const ToggleButton = ({ isOnScreen, setIsOnScreen }) => {
         onValueChange={toggle}
         trackColor={{ false: "#767577", true: "#0eb92aff" }}
         thumbColor={isOnScreen ? "#fdfcf5ff" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
+        ios_backgroundColor={dark.middledark}
       />
     </View>
   );

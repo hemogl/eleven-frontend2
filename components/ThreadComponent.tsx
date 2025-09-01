@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { dark } from "../colorPalet";
 
-export default class Settings extends Component {
+export default class ThreadComponent extends Component {
   render() {
     return (
       <View style={styles.container}>
