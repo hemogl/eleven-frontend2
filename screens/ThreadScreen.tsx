@@ -12,7 +12,10 @@ export default class ThreadScreen extends Component {
         email: "mattiaparisi@gmail.com",
         OnScreen: true,
         id: 0,
-        location: "Paname",
+        location: {
+          place: "Paname",
+          rating: 5,
+        },
       },
       {
         name: "Alessia",
@@ -20,7 +23,10 @@ export default class ThreadScreen extends Component {
         email: "alessiaciccarello@gmail.com",
         OnScreen: true,
         id: 1,
-        location: "Bisous Club",
+        location: {
+          place: "Bisous Club",
+          rating: 5,
+        },
       },
       {
         name: "Ciccio",
@@ -28,7 +34,10 @@ export default class ThreadScreen extends Component {
         email: "cicciobelo@gmail.com",
         OnScreen: true,
         id: 2,
-        location: "Rex Club",
+        location: {
+          place: "Rex Club",
+          rating: 5,
+        },
       },
       {
         name: "Santo",
@@ -36,7 +45,10 @@ export default class ThreadScreen extends Component {
         email: "santoterranova@gmail.com",
         OnScreen: false,
         id: 3,
-        location: "Open Air Montreuil",
+        location: {
+          place: "Montreuil Open Air",
+          rating: 5,
+        },
       },
       {
         name: "Damiano",
@@ -44,7 +56,10 @@ export default class ThreadScreen extends Component {
         email: "damianopulvirenti@gmail.com",
         OnScreen: true,
         id: 4,
-        location: "Bisous Club",
+        location: {
+          place: "Pigale Country Club",
+          rating: 5,
+        },
       },
       {
         name: "Enrico",
@@ -52,7 +67,10 @@ export default class ThreadScreen extends Component {
         email: "enricobruno@gmail.com",
         OnScreen: true,
         id: 5,
-        location: "Wanderlust",
+        location: {
+          place: "Deux Magots",
+          rating: 5,
+        },
       },
     ];
 
@@ -61,11 +79,19 @@ export default class ThreadScreen extends Component {
     friends.map((friend, key) => {
       if (friend.OnScreen) {
         friendsThreadList.push(
-          <View style={styles.friendContainer}>
-            <Text>
-              {friend.name} is at {friend.location}{" "}
-            </Text>
-            <SubscribeButton text="Unsubscribe"></SubscribeButton>
+          <View>
+            <View style={styles.friendContainer}>
+              <Text>
+                {friend.name} is at {friend.location.place}
+              </Text>
+              <Text>
+                Rating:
+                {friend.location.rating} === 5 ? " ★ ★ ★ ★ ★" : " ★ "
+              </Text>
+            </View>
+            <View>
+              <SubscribeButton text="Unsubscribe"></SubscribeButton>
+            </View>
           </View>
         );
       }
