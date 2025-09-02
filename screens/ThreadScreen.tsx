@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Pressable, Text, View, Image } from "react-native";
 import { dark } from "../colorPalet";
-import SubscribeButton from "../components/Buttons/SubscribeButton";
+import GenericButton from "../components/Buttons/GenericButton";
 import { friends } from "../utils";
 import { ScrollView } from "react-native";
 import Heading from "../components/Titles/Heading";
@@ -26,10 +26,10 @@ function ThreadScreen() {
             </Text>
           </View>
           <View>
-            <SubscribeButton
+            <GenericButton
               title="Unsubscribe"
               action={Unsubscribe}
-            ></SubscribeButton>
+            ></GenericButton>
           </View>
         </View>
       );

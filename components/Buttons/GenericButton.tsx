@@ -2,7 +2,7 @@ import * as React from "react";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
 import { dark } from "../../colorPalet";
 
-const SubscribeButton = ({ title, action }: any) => {
+const GenericButton = ({ title, action }: any) => {
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);
 
   return (
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SubscribeButton;
+export default GenericButton;

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { dark } from "../colorPalet";
-import SubscribeButton from "../components/Buttons/SubscribeButton";
+import GenericButton from "../components/Buttons/GenericButton";
 import { useNavigation } from "@react-navigation/native";
+import LoginInput from "../components/LoginInput";
+import GreyInput from "../components/GreyInput";
 
 function Settings() {
   const navigation = useNavigation<any>();
@@ -11,36 +13,39 @@ function Settings() {
     navigation.getParent()?.navigate("Chart");
   };
 
+  const changePwd = () => {
+    console.log("changing password");
+  };
+
+  const changeEmail = () => {
+    console.log("changing password");
+  };
+
   return (
-    <View style={styles.container}>
-      <Text> Eleven </Text>
-      <TouchableOpacity>
-        <Text style={styles.text}> Change password </Text>
-      </TouchableOpacity>
-      <Text style={styles.textt}> Log out </Text>
-      <SubscribeButton
-        title="About Eleven"
-        action={readChart}
-      ></SubscribeButton>
+    <View style={styles.settingsContainer}>
+      <GreyInput placeholder="email"></GreyInput>
+      <GenericButton title="Change email" action={changeEmail}></GenericButton>
+      <GreyInput placeholder="password"></GreyInput>
+      <GreyInput placeholder="password"></GreyInput>
+      <GenericButton title="Change password" action={changePwd}></GenericButton>
+      <GenericButton title="About Eleven" action={readChart}></GenericButton>
+      <GenericButton title="Log Out" action={readChart}></GenericButton>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  settingsContainer: {
     flex: 1,
-    backgroundColor: dark.black,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    backgroundColor: dark.white,
+    alignItems: "center",
   },
   text: {
     flex: 1,
     position: "absolute",
     top: 120,
-    color: dark.white,
-  },
-  textt: {
-    flex: 1,
-    position: "absolute",
-    top: 170,
     color: dark.white,
   },
   body: {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { dark } from "../colorPalet";
-import SubscribeButton from "../components/Buttons/SubscribeButton";
+import GenericButton from "../components/Buttons/GenericButton";
 import Avatar from "../components/Avatar";
 import Heading from "../components/Titles/Heading";
 
@@ -20,11 +20,11 @@ export default class UserProfileView extends Component {
         <View>
           <Avatar url={require("../assets/profileImage.jpg")}></Avatar>
           <Heading title={user.name} color={dark.black}></Heading>
-          <SubscribeButton
+          <GenericButton
             title="Subscribe"
             action={Subscribe}
             style={{ marginTop: 10 }}
-          ></SubscribeButton>
+          ></GenericButton>
         </View>
       </View>
     );
