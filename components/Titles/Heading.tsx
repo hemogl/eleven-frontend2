@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import { StyleSheet, Pressable, Text, View, Image } from "react-native";
-import { dark } from "../colorPalet";
-import SubscribeButton from "../components/SubscribeButton";
+import { dark } from "../../colorPalet";
+import SubscribeButton from "./SubscribeButton";
 
-function SubHeading({ text, titleColor }: any) {
+const Title = ({ text, titleColor }: any) => {
   return (
-    <View style={styles.subHeading}>
+    <View style={styles.heading}>
       <Text style={{ color: titleColor }}> {text} </Text>
     </View>
   );
-}
+};
+
+export default Title;
 
 const styles = StyleSheet.create({
-  subHeading: {
+  heading: {
     fontWeight: "bold",
-    fontSize: 15,
+    fontSize: 20,
     paddingTop: 2,
     paddingBottom: 5,
     paddingHorizontal: 6,
     fontFamily: "Verdana",
   },
 });
-
-export default SubHeading;

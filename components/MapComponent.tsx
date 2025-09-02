@@ -1,5 +1,5 @@
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-import ToggleButton from "../components/ToggleButton";
+import ToggleButton from "../components/Buttons/ToggleButton";
 import { StyleSheet, View } from "react-native";
 import React, { useState } from "react";
 

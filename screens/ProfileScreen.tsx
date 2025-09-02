@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import { dark } from "../colorPalet";
-import SubscribeButton from "../components/SubscribeButton";
+import SubscribeButton from "../components/Buttons/SubscribeButton";
 import Avatar from "../components/Avatar";
-import Heading from "../components/Heading";
+import Heading from "../components/Titles/Heading";
 
 export default class UserProfileView extends Component {
   render() {

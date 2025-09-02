@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
-import { dark } from "../colorPalet";
+import { dark } from "../../colorPalet";
 
 const SubscribeButton = ({ title }: any) => {
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);

@@ -9,8 +9,8 @@ export default class Settings extends Component {
         <Text> Eleven </Text>
         <TouchableOpacity>
           <Text style={styles.text}> Change password </Text>
-          <Text style={styles.textt}> Log out </Text>
         </TouchableOpacity>
+        <Text style={styles.textt}> Log out </Text>
       </View>
     );
   }

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { StyleSheet, Pressable, Text, View, Image } from "react-native";
 import { dark } from "../colorPalet";
-import SubscribeButton from "../components/SubscribeButton";
+import SubscribeButton from "../components/Buttons/SubscribeButton";
 import { friends } from "../utils";
+import { ScrollView } from "react-native";
 
 export default class ThreadScreen extends Component {
   render() {
@@ -29,9 +30,9 @@ export default class ThreadScreen extends Component {
     });
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View>{friendsThreadList}</View>
-      </View>
+      </ScrollView>
     );
   }
 }

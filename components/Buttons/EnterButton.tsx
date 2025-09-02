@@ -14,7 +14,7 @@ const EnterButton = ({ destination }: any) => {
       <TouchableOpacity onPress={goMap}>
         <Image
           style={styles.size}
-          source={require("../assets/enter.png")}
+          source={require("../../assets/enter.png")}
         ></Image>
       </TouchableOpacity>
     </View>

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import Heading from "../components/Heading";
-import SubHeading from "../components/SubHeading";
+import Heading from "../components/Titles/Heading";
+import SubHeading from "../components/Titles/SubHeading";
 import { dark } from "../colorPalet";
 
 function ChartScreen() {

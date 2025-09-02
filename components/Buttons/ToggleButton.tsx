@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Switch, StyleSheet } from "react-native";
-import { dark } from "../colorPalet";
+import { dark } from "../../colorPalet";
 
 const ToggleButton = ({ isOnScreen, setIsOnScreen }) => {
   const toggle = () => {
