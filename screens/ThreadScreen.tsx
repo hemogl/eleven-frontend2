@@ -99,7 +99,7 @@ export default class ThreadScreen extends Component {
     return (
       <View style={styles.container}>
         <View>
-          <Text style={styles.text}> ★ Thread ★ </Text>
+          <Text style={styles.text}> Thread </Text>
           {friendsThreadList}
         </View>
       </View>
@@ -110,9 +110,9 @@ export default class ThreadScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: dark.white,
     borderWidth: 1,
     paddingTop: 50,
+    backgroundColor: "transparent",
   },
   friendContainer: {
     margin: 12,
@@ -125,6 +125,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "center",
     color: dark.black,
+    fontSize: 19,
+    marginTop: 18,
   },
   body: {
     backgroundColor: dark.white,

@@ -3,10 +3,10 @@ import { StyleSheet, Pressable, Text, View, Image } from "react-native";
 import { dark } from "../colorPalet";
 import SubscribeButton from "../components/SubscribeButton";
 
-function SubHeading({ text }: any) {
+function SubHeading({ text, titleColor }: any) {
   return (
     <View style={styles.subHeading}>
-      <Text> {text} </Text>
+      <Text style={{ color: titleColor }}> {text} </Text>
     </View>
   );
 }

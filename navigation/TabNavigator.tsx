@@ -4,6 +4,8 @@ import Map from "../components/MapComponent";
 import ProfileScreen from "../screens/ProfileScreen";
 import SettingScreen from "../screens/SettingScreen";
 import ThreadScreen from "../screens/ThreadScreen";
+import ChartScreen from "../screens/ChartScreen";
+
 import { Image, StyleSheet } from "react-native";
 const Tab = createBottomTabNavigator();
 
@@ -40,6 +42,18 @@ export default function TabNavigator() {
       <Tab.Screen
         name="Settings"
         component={SettingScreen}
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            <Image
+              source={require("../assets/settings.png")}
+              style={styles.icon}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Chart"
+        component={ChartScreen}
         options={{
           tabBarIcon: ({ focused, color, size }) => (
             <Image
