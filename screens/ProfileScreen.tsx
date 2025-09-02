@@ -9,11 +9,11 @@ export default class UserProfileView extends Component {
       <View style={styles.container}>
         <View>
           <Text style={styles.text}> Profile picture </Text>
-          <Image />
+          <Image source={require("../assets/icon.png")} />
           <Pressable>
             <Text style={styles.text}> Subscribe </Text>
           </Pressable>
-          <SubscribeButton></SubscribeButton>
+          <SubscribeButton style={{ marginTop: 10 }}></SubscribeButton>
         </View>
       </View>
     );
@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: dark.white,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
   },
   text: {
     textAlign: "center",

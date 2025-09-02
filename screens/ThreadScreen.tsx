@@ -85,8 +85,7 @@ export default class ThreadScreen extends Component {
                 {friend.name} is at {friend.location.place}
               </Text>
               <Text>
-                Rating:
-                {friend.location.rating} === 5 ? " ★ ★ ★ ★ ★" : " ★ "
+                Rating: {friend.location.rating === 5 ? " ★ ★ ★ ★ ★" : " ★ "}
               </Text>
             </View>
             <View>
@@ -100,7 +99,7 @@ export default class ThreadScreen extends Component {
     return (
       <View style={styles.container}>
         <View>
-          <Text style={styles.text}> Thread Screen </Text>
+          <Text style={styles.text}> ★ Thread ★ </Text>
           {friendsThreadList}
         </View>
       </View>
@@ -112,6 +111,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: dark.white,
+    borderWidth: 1,
+    paddingTop: 50,
   },
   friendContainer: {
     margin: 12,
@@ -119,6 +120,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   text: {
+    fontFamily: "MontSerrat",
+    fontWeight: "bold",
     textAlign: "center",
     justifyContent: "center",
     color: dark.black,
