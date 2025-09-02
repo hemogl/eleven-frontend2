@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, Pressable, Text, View, Image } from "react-native";
-import { dark } from "../../colorPalet";
-import SubscribeButton from "./SubscribeButton";
 
-const Title = ({ text, titleColor }: any) => {
+const Title = ({ title, color }: any) => {
   return (
-    <View style={styles.heading}>
-      <Text style={{ color: titleColor }}> {text} </Text>
+    <View>
+      <Text style={[styles.headingText, { color: color }]}> {title} </Text>
     </View>
   );
 };
@@ -14,12 +12,14 @@ const Title = ({ text, titleColor }: any) => {
 export default Title;
 
 const styles = StyleSheet.create({
-  heading: {
+  headingText: {
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: 30,
     paddingTop: 2,
     paddingBottom: 5,
     paddingHorizontal: 6,
     fontFamily: "Verdana",
+    textAlign: "center",
+    justifyContent: "center",
   },
 });
