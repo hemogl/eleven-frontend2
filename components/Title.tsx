@@ -5,10 +5,21 @@ import SubscribeButton from "../components/SubscribeButton";
 
 const Title = ({ text }: any) => {
   return (
-    <View>
+    <View style={styles.heading}>
       <Text> {text} </Text>
     </View>
   );
 };
 
 export default Title;
+
+const styles = StyleSheet.create({
+  heading: {
+    fontWeight: "bold",
+    fontSize: 20,
+    paddingTop: 2,
+    paddingBottom: 5,
+    paddingHorizontal: 6,
+    fontFamily: "Verdana",
+  },
+});
