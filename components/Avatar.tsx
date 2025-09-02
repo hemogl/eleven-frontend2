@@ -3,19 +3,23 @@ import { StyleSheet, Pressable, Text, View, Image } from "react-native";
 import { dark } from "../colorPalet";
 import SubscribeButton from "../components/SubscribeButton";
 
-const Avatar = ({ url }) => {
+const Avatar = ({ url }: any) => {
   return (
-    <View>
-      <Image source={require(url)} style={styles.avatar} />;
+    <View style={styles.imageContainer}>
+      <Image source={url} style={styles.avatar} />;
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  imageContainer: {
+    margin: 20,
+  },
   avatar: {
-    width: 30,
-    height: 30,
-    borderRadius: 40,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    overflow: "hidden",
   },
 });
 

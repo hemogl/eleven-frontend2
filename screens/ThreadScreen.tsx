@@ -2,84 +2,16 @@ import React, { Component } from "react";
 import { StyleSheet, Pressable, Text, View, Image } from "react-native";
 import { dark } from "../colorPalet";
 import SubscribeButton from "../components/SubscribeButton";
+import { friends } from "../utils";
 
 export default class ThreadScreen extends Component {
   render() {
-    const friends = [
-      {
-        name: "Mattia",
-        surname: "Parisi",
-        email: "mattiaparisi@gmail.com",
-        OnScreen: true,
-        id: 0,
-        location: {
-          place: "Paname",
-          rating: 5,
-        },
-      },
-      {
-        name: "Alessia",
-        surname: "Ciccarello",
-        email: "alessiaciccarello@gmail.com",
-        OnScreen: true,
-        id: 1,
-        location: {
-          place: "Bisous Club",
-          rating: 5,
-        },
-      },
-      {
-        name: "Ciccio",
-        surname: "Belo",
-        email: "cicciobelo@gmail.com",
-        OnScreen: true,
-        id: 2,
-        location: {
-          place: "Rex Club",
-          rating: 5,
-        },
-      },
-      {
-        name: "Santo",
-        surname: "Terranova",
-        email: "santoterranova@gmail.com",
-        OnScreen: false,
-        id: 3,
-        location: {
-          place: "Montreuil Open Air",
-          rating: 5,
-        },
-      },
-      {
-        name: "Damiano",
-        surname: "Pulvirenti",
-        email: "damianopulvirenti@gmail.com",
-        OnScreen: true,
-        id: 4,
-        location: {
-          place: "Pigale Country Club",
-          rating: 5,
-        },
-      },
-      {
-        name: "Enrico",
-        surname: "Bruno",
-        email: "enricobruno@gmail.com",
-        OnScreen: true,
-        id: 5,
-        location: {
-          place: "Deux Magots",
-          rating: 5,
-        },
-      },
-    ];
-
     const friendsThreadList = [];
 
     friends.map((friend, key) => {
       if (friend.OnScreen) {
         friendsThreadList.push(
-          <View>
+          <View key={friend.id}>
             <View style={styles.friendContainer}>
               <Text>
                 {friend.name} is at {friend.location.place}
@@ -89,7 +21,7 @@ export default class ThreadScreen extends Component {
               </Text>
             </View>
             <View>
-              <SubscribeButton text="Unsubscribe"></SubscribeButton>
+              <SubscribeButton title="Unsubscribe"></SubscribeButton>
             </View>
           </View>
         );
@@ -98,10 +30,7 @@ export default class ThreadScreen extends Component {
 
     return (
       <View style={styles.container}>
-        <View>
-          <Text style={styles.text}> Thread </Text>
-          {friendsThreadList}
-        </View>
+        <View>{friendsThreadList}</View>
       </View>
     );
   }
@@ -110,7 +39,6 @@ export default class ThreadScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    borderWidth: 1,
     paddingTop: 50,
     backgroundColor: "transparent",
   },

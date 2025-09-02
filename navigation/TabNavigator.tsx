@@ -11,11 +11,12 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
   return (
-    <Tab.Navigator id={undefined} screenOptions={{ headerShown: false }}>
+    <Tab.Navigator id={undefined} screenOptions={{ headerShown: true }}>
       <Tab.Screen
         name="Thread"
         component={ThreadScreen}
         options={{
+          title: "Thread",
           tabBarIcon: ({ focused, color, size }) => (
             <Image source={require("../assets/down.png")} style={styles.icon} />
           ),

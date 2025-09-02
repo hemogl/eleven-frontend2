@@ -1,20 +1,25 @@
 import React, { Component } from "react";
-import { StyleSheet, Pressable, Text, View, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { dark } from "../colorPalet";
 import SubscribeButton from "../components/SubscribeButton";
 import Avatar from "../components/Avatar";
+import Heading from "../components/Heading";
 
 export default class UserProfileView extends Component {
   render() {
+    const user = {
+      name: "Santi",
+    };
+
     return (
       <View style={styles.container}>
         <View>
-          <Avatar url="https://i.pinimg.com/736x/54/72/d1/5472d1b09d3d724228109d381d617326.jpg"></Avatar>
-          <Image source={require("../assets/icon.png")} />
-          <Pressable>
-            <Text style={styles.text}> Subscribe </Text>
-          </Pressable>
-          <SubscribeButton style={{ marginTop: 10 }}></SubscribeButton>
+          <Avatar url={require("../assets/profileImage.jpg")}></Avatar>
+          <Heading title={user.name}></Heading>
+          <SubscribeButton
+            title="Subscribe"
+            style={{ marginTop: 10 }}
+          ></SubscribeButton>
         </View>
       </View>
     );
