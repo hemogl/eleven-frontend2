@@ -11,13 +11,18 @@ export default class UserProfileView extends Component {
       name: "Santi",
     };
 
+    const Subscribe = () => {
+      console.log("You subscribed to x's profile!");
+    };
+
     return (
       <View style={styles.container}>
         <View>
           <Avatar url={require("../assets/profileImage.jpg")}></Avatar>
-          <Heading title={user.name}></Heading>
+          <Heading title={user.name} color={dark.black}></Heading>
           <SubscribeButton
             title="Subscribe"
+            action={Subscribe}
             style={{ marginTop: 10 }}
           ></SubscribeButton>
         </View>

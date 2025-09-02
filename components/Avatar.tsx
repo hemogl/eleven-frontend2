@@ -6,7 +6,7 @@ import SubscribeButton from "../components/Buttons/SubscribeButton";
 const Avatar = ({ url }: any) => {
   return (
     <View style={styles.imageContainer}>
-      <Image source={url} style={styles.avatar} />;
+      <Image source={url} style={styles.avatar} />
     </View>
   );
 };

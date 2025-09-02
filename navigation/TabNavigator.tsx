@@ -52,18 +52,6 @@ export default function TabNavigator() {
           ),
         }}
       />
-      <Tab.Screen
-        name="Chart"
-        component={ChartScreen}
-        options={{
-          tabBarIcon: ({ focused, color, size }) => (
-            <Image
-              source={require("../assets/settings.png")}
-              style={styles.icon}
-            />
-          ),
-        }}
-      />
     </Tab.Navigator>
   );
 }

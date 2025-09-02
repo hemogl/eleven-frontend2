@@ -9,6 +9,10 @@ import Heading from "../components/Titles/Heading";
 function ThreadScreen() {
   const friendsThreadList = [];
 
+  const Unsubscribe = () => {
+    console.log("You unsubscribed from x!");
+  };
+
   friends.map((friend, key) => {
     if (friend.OnScreen) {
       friendsThreadList.push(
@@ -22,7 +26,10 @@ function ThreadScreen() {
             </Text>
           </View>
           <View>
-            <SubscribeButton title="Unsubscribe"></SubscribeButton>
+            <SubscribeButton
+              title="Unsubscribe"
+              action={Unsubscribe}
+            ></SubscribeButton>
           </View>
         </View>
       );

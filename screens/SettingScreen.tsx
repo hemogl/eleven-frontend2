@@ -1,19 +1,29 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { dark } from "../colorPalet";
+import SubscribeButton from "../components/Buttons/SubscribeButton";
+import { useNavigation } from "@react-navigation/native";
 
-export default class Settings extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text> Eleven </Text>
-        <TouchableOpacity>
-          <Text style={styles.text}> Change password </Text>
-        </TouchableOpacity>
-        <Text style={styles.textt}> Log out </Text>
-      </View>
-    );
-  }
+function Settings() {
+  const navigation = useNavigation<any>();
+
+  const readChart = () => {
+    navigation.getParent()?.navigate("Chart");
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text> Eleven </Text>
+      <TouchableOpacity>
+        <Text style={styles.text}> Change password </Text>
+      </TouchableOpacity>
+      <Text style={styles.textt}> Log out </Text>
+      <SubscribeButton
+        title="About Eleven"
+        action={readChart}
+      ></SubscribeButton>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -39,3 +49,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+export default Settings;

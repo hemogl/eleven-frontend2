@@ -2,15 +2,12 @@ import * as React from "react";
 import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
 import { dark } from "../../colorPalet";
 
-const SubscribeButton = ({ title }: any) => {
+const SubscribeButton = ({ title, action }: any) => {
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);
 
-  const Subscribe = () => {
-    console.log("You subscribed to x's profile!");
-  };
   return (
     <View>
-      <TouchableOpacity style={styles.button} onPress={Subscribe}>
+      <TouchableOpacity style={styles.button} onPress={action}>
         <Text style={styles.textButton}> {title} </Text>
       </TouchableOpacity>
     </View>

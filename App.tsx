@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./screens/LoginScreen";
 import TabNavigator from "./navigation/TabNavigator";
-
+import ChartScreen from "./screens/ChartScreen";
+import Settings from "./screens/SettingScreen";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       >
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Map" component={TabNavigator} />
+        <Stack.Screen name="Chart" component={ChartScreen} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
