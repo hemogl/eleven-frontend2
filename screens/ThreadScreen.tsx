@@ -12,8 +12,8 @@ function ThreadScreen() {
   friends.map((friend, key) => {
     if (friend.OnScreen) {
       friendsThreadList.push(
-        <View key={friend.id}>
-          <View style={styles.friendContainer}>
+        <View key={friend.id} style={styles.friendCard}>
+          <View>
             <Text>
               {friend.name} is at {friend.location.place}
             </Text>
@@ -30,23 +30,29 @@ function ThreadScreen() {
   });
 
   return (
-    <ScrollView style={styles.container}>
-      <Heading title="activity" style={{ color: dark.black }}></Heading>
+    <ScrollView style={styles.ThreadContainer}>
+      <Heading title="activity" style={{ color: dark.darkgrey }}></Heading>
       <View>{friendsThreadList}</View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  ThreadContainer: {
     flex: 1,
-    paddingTop: 50,
+    paddingTop: 30,
     backgroundColor: dark.white,
   },
-  friendContainer: {
-    margin: 12,
-    marginTop: 80,
+  friendCard: {
+    margin: 3,
+    padding: 37,
+    flex: 1,
+    marginTop: 20,
     flexDirection: "row",
+    borderWidth: 2,
+    width: "99%",
+    borderColor: dark.almostgrey,
+    alignSelf: "center",
   },
   text: {
     fontFamily: "MontSerrat",
