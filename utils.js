@@ -1,3 +1,18 @@
+// Récupérer la localisation
+import * as Location from "expo-location";
+
+async function loadDefaultLocation() {
+  let { status } = await Location.requestForegroundPermissionsAsync();
+  if (status !== "granted") {
+    throw new Error("Permission refusée");
+  }
+  let location = await Location.getCurrentPositionAsync({});
+  console.log("current location", location);
+  return location;
+}
+
+export default loadDefaultLocation;
+
 export const friends = [
   {
     name: "Mattia",
@@ -5,10 +20,11 @@ export const friends = [
     email: "mattiaparisi@gmail.com",
     OnScreen: true,
     id: 0,
-    location: {
+    currentLocation: {
       place: "Paname",
       rating: 5,
     },
+    friends: 12,
   },
   {
     name: "Alessia",
@@ -16,10 +32,11 @@ export const friends = [
     email: "alessiaciccarello@gmail.com",
     OnScreen: true,
     id: 1,
-    location: {
+    currentLocation: {
       place: "Bisous Club",
       rating: 5,
     },
+    friends: 67,
   },
   {
     name: "Ciccio",
@@ -27,10 +44,11 @@ export const friends = [
     email: "cicciobelo@gmail.com",
     OnScreen: true,
     id: 2,
-    location: {
+    currentLocation: {
       place: "Rex Club",
       rating: 5,
     },
+    friends: 3,
   },
   {
     name: "Santo",
@@ -38,10 +56,11 @@ export const friends = [
     email: "santoterranova@gmail.com",
     OnScreen: false,
     id: 3,
-    location: {
+    currentLocation: {
       place: "Montreuil Open Air",
       rating: 5,
     },
+    friends: 9,
   },
   {
     name: "Damiano",
@@ -49,10 +68,11 @@ export const friends = [
     email: "damianopulvirenti@gmail.com",
     OnScreen: true,
     id: 4,
-    location: {
+    currentLocation: {
       place: "Pigale Country Club",
       rating: 5,
     },
+    friends: 33,
   },
   {
     name: "Enrico",
@@ -60,9 +80,10 @@ export const friends = [
     email: "enricobruno@gmail.com",
     OnScreen: true,
     id: 5,
-    location: {
+    currentLocation: {
       place: "Deux Magots",
       rating: 5,
     },
+    friends: 1,
   },
 ];

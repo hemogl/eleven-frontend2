@@ -19,10 +19,11 @@ function ThreadScreen() {
         <View key={friend.id} style={styles.friendCard}>
           <View>
             <Text>
-              {friend.name} is at {friend.location.place}
+              {friend.name} is at {friend.currentLocation.place}
             </Text>
             <Text>
-              Rating: {friend.location.rating === 5 ? " ★ ★ ★ ★ ★" : " ★ "}
+              Rating:{" "}
+              {friend.currentLocation.rating === 5 ? " ★ ★ ★ ★ ★" : " ★ "}
             </Text>
           </View>
           <View>

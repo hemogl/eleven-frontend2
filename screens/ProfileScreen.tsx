@@ -1,34 +1,42 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { dark } from "../colorPalet";
 import GenericButton from "../components/Buttons/GenericButton";
 import Avatar from "../components/Avatar";
 import Heading from "../components/Titles/Heading";
 
-export default class UserProfileView extends Component {
-  render() {
-    const user = {
-      name: "Santi",
-    };
+function MyProfile() {
+  const user = {
+    name: "Mattia",
+    surname: "Parisi",
+    email: "mattiaparisi@gmail.com",
+    OnScreen: true,
+    id: 0,
+    currentLocation: {
+      place: "Paname",
+      rating: 5,
+    },
+    friends: 12,
+  };
 
-    const Subscribe = () => {
-      console.log("You subscribed to x's profile!");
-    };
+  const Subscribe = () => {
+    console.log("You subscribed to x's profile!");
+  };
 
-    return (
-      <View style={styles.container}>
-        <View>
-          <Avatar url={require("../assets/profileImage.jpg")}></Avatar>
-          <Heading title={user.name} color={dark.black}></Heading>
-          <GenericButton
-            title="Subscribe"
-            action={Subscribe}
-            style={{ marginTop: 10 }}
-          ></GenericButton>
-        </View>
+  return (
+    <View style={styles.container}>
+      <View>
+        <Avatar url={require("../assets/profileImage.jpg")}></Avatar>
+        <Heading title={user.name} color={dark.black}></Heading>
+        <Text> {user.friends} friends </Text>
+        <GenericButton
+          title="Subscribe"
+          action={Subscribe}
+          style={{ marginTop: 10 }}
+        ></GenericButton>
       </View>
-    );
-  }
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -50,3 +58,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
+
+export default MyProfile;
