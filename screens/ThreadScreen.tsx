@@ -30,8 +30,17 @@ function ThreadScreen() {
             <GenericButton
               title="Unsubscribe"
               action={Unsubscribe}
+              backgroundColor={dark.black}
+              color={dark.pink}
             ></GenericButton>
           </View>
+          <GenericButton
+            title="Join"
+            action={Unsubscribe}
+            width={55}
+            backgroundColor={dark.black}
+            color={dark.white}
+          ></GenericButton>
         </View>
       );
     }
@@ -39,7 +48,10 @@ function ThreadScreen() {
 
   return (
     <ScrollView style={styles.ThreadContainer}>
-      <Heading title="activity" style={{ color: dark.darkgrey }}></Heading>
+      <Heading
+        title="where do you wanna go?"
+        style={{ color: dark.darkgrey }}
+      ></Heading>
       <View>{friendsThreadList}</View>
     </ScrollView>
   );

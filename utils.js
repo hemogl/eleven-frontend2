@@ -69,7 +69,7 @@ export const friends = [
     OnScreen: true,
     id: 4,
     currentLocation: {
-      place: "Pigale Country Club",
+      place: "Pigale  Club",
       rating: 5,
     },
     friends: 33,

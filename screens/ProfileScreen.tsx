@@ -19,6 +19,10 @@ function MyProfile() {
     friends: 12,
   };
 
+  const LogJoinRequests = () => {
+    console.log("You have 3 join requests!");
+  };
+
   const Subscribe = () => {
     console.log("You subscribed to x's profile!");
   };
@@ -30,9 +34,17 @@ function MyProfile() {
         <Heading title={user.name} color={dark.black}></Heading>
         <Text> {user.friends} friends </Text>
         <GenericButton
+          color={dark.white}
+          backgroundColor={dark.black}
           title="Subscribe"
           action={Subscribe}
           style={{ marginTop: 10 }}
+        ></GenericButton>
+        <GenericButton
+          title="Join Requests"
+          color={dark.white}
+          backgroundColor={dark.pink}
+          action={LogJoinRequests}
         ></GenericButton>
       </View>
     </View>

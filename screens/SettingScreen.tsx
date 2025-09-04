@@ -5,6 +5,7 @@ import GenericButton from "../components/Buttons/GenericButton";
 import { useNavigation } from "@react-navigation/native";
 import LoginInput from "../components/LoginInput";
 import GreyInput from "../components/GreyInput";
+import SettingsList from "../components/SettingsList";
 
 function Settings() {
   const navigation = useNavigation<any>();
@@ -23,13 +24,14 @@ function Settings() {
 
   return (
     <View style={styles.settingsContainer}>
-      <GreyInput placeholder="email"></GreyInput>
+      <SettingsList></SettingsList>
+      {/*   <GreyInput placeholder="email"></GreyInput>
       <GenericButton title="Change email" action={changeEmail}></GenericButton>
       <GreyInput placeholder="password"></GreyInput>
       <GreyInput placeholder="password"></GreyInput>
       <GenericButton title="Change password" action={changePwd}></GenericButton>
       <GenericButton title="About Eleven" action={readChart}></GenericButton>
-      <GenericButton title="Log Out" action={readChart}></GenericButton>
+      <GenericButton title="Log Out" action={readChart}></GenericButton> */}
     </View>
   );
 }
