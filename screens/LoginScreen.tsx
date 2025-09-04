@@ -23,7 +23,7 @@ function LoginScreen() {
     <View style={styles.container}>
       <Image
         style={{ width: 200, height: 82 }}
-        source={require("../assets/LOGOW.png")}
+        source={require("../assets/eleven-logo.png")}
       ></Image>
       <LoginInput
         insidePlaceholder={"email"}

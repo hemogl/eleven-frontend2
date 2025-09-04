@@ -4,7 +4,7 @@
     "slug": "eleven-frontend2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/splash.png",
+    "icon": "./assets/splash-screen.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "ios": {
@@ -19,6 +19,20 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#232323",
+          "image": "./assets/splash-screen.png",
+          "dark": {
+            "image": "./assets/splash-screen.png",
+            "backgroundColor": "#fffffff"
+          },
+          "imageWidth": 200
+        }
+      ]
+    ]
   }
 }
