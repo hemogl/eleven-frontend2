@@ -18,6 +18,10 @@ export const friends = [
     name: "Mattia",
     surname: "Parisi",
     email: "mattiaparisi@gmail.com",
+    location: {
+      latitude: 48.855912,
+      longitude: 2.36766,
+    },
     OnScreen: true,
     id: 0,
     currentLocation: {
@@ -30,6 +34,10 @@ export const friends = [
     name: "Alessia",
     surname: "Ciccarello",
     email: "alessiaciccarello@gmail.com",
+    location: {
+      latitude: 48.888657,
+      longitude: 2.378072,
+    },
     OnScreen: true,
     id: 1,
     currentLocation: {
@@ -42,6 +50,10 @@ export const friends = [
     name: "Ciccio",
     surname: "Belo",
     email: "cicciobelo@gmail.com",
+    location: {
+      latitude: 48.868575,
+      longitude: 2.325545,
+    },
     OnScreen: true,
     id: 2,
     currentLocation: {
@@ -54,6 +66,10 @@ export const friends = [
     name: "Santo",
     surname: "Terranova",
     email: "santoterranova@gmail.com",
+    location: {
+      latitude: 48.83261,
+      longitude: 2.320518,
+    },
     OnScreen: false,
     id: 3,
     currentLocation: {
@@ -66,6 +82,10 @@ export const friends = [
     name: "Damiano",
     surname: "Pulvirenti",
     email: "damianopulvirenti@gmail.com",
+    location: {
+      latitude: 48.871053,
+      longitude: 2.343012,
+    },
     OnScreen: true,
     id: 4,
     currentLocation: {
@@ -78,6 +98,10 @@ export const friends = [
     name: "Enrico",
     surname: "Bruno",
     email: "enricobruno@gmail.com",
+    location: {
+      latitude: 48.847302,
+      longitude: 2.314699,
+    },
     OnScreen: true,
     id: 5,
     currentLocation: {

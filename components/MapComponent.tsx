@@ -1,8 +1,9 @@
-import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
+import MapView, { PROVIDER_GOOGLE, Marker } from "react-native-maps";
 import ToggleButton from "../components/Buttons/ToggleButton";
 import { StyleSheet, View, Text } from "react-native";
 import loadDefaultLocation from "../utils";
 import React, { useEffect, useState } from "react";
+import friends from "../utils";
 
 function MapComponent() {
   const [isOnScreen, setIsOnScreen] = useState(true); // état partagé
@@ -41,7 +42,17 @@ function MapComponent() {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}
-        />
+        >
+          <Marker
+            coordinate={{
+              latitude: 2.314699,
+              longitude: 48.847302,
+            }}
+            pinColor={"purple"}
+            title={"friend"}
+            description={"Friends are going out!"}
+          />
+        </MapView>
         <View style={styles.toggle}>
           <ToggleButton isOnScreen={isOnScreen} setIsOnScreen={setIsOnScreen} />
         </View>

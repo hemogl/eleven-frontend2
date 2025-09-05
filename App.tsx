@@ -4,6 +4,7 @@ import { StyleSheet, Text, Image, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./screens/LoginScreen";
+import MyJoinRequests from "./screens/JoinRequestsScreen";
 import TabNavigator from "./navigation/TabNavigator";
 import ChartScreen from "./screens/ChartScreen";
 import * as SplashScreen from "expo-splash-screen";
@@ -51,6 +52,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Map" component={TabNavigator} />
         <Stack.Screen name="Chart" component={ChartScreen} />
+        <Stack.Screen name="JoinRequests" component={MyJoinRequests} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
