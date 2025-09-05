@@ -3,12 +3,27 @@ import ToggleButton from "../components/Buttons/ToggleButton";
 import { StyleSheet, View, Text } from "react-native";
 import loadDefaultLocation from "../utils";
 import React, { useEffect, useState } from "react";
-import friends from "../utils";
+import { friends } from "../utils";
 
 function MapComponent() {
   const [isOnScreen, setIsOnScreen] = useState(true); // état partagé
   const [myLatitude, setMyLatitude] = useState(null);
   const [myLongitude, setMyLongitude] = useState(null);
+
+  const transformMarker = (friendList) => {
+    return friendList.map((friend) => ({
+      friendName: friend.name,
+      latitude: friend.coords.latitude,
+      longitude: friend.coords.longitude,
+      latitudeDelta: 0.01,
+      longitudeDelta: 0.01,
+    }));
+  };
+
+  const markers = transformMarker(friends);
+  const onMarkerSelected = (marker: any) => {
+    alert(`${marker.friendName} is on`);
+  };
 
   useEffect(() => {
     async function loadLocation() {
@@ -43,16 +58,16 @@ function MapComponent() {
             longitudeDelta: 0.0421,
           }}
         >
-          <Marker
-            coordinate={{
-              latitude: 2.314699,
-              longitude: 48.847302,
-            }}
-            pinColor={"purple"}
-            title={"friend"}
-            description={"Friends are going out!"}
-          />
+          {markers.map((marker, index) => (
+            <Marker
+              key={index}
+              coordinate={marker}
+              onPress={() => onMarkerSelected(marker)}
+              pinColor={"green"}
+            />
+          ))}
         </MapView>
+
         <View style={styles.toggle}>
           <ToggleButton isOnScreen={isOnScreen} setIsOnScreen={setIsOnScreen} />
         </View>

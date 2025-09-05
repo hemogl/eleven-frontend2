@@ -18,7 +18,7 @@ export const friends = [
     name: "Mattia",
     surname: "Parisi",
     email: "mattiaparisi@gmail.com",
-    location: {
+    coords: {
       latitude: 48.855912,
       longitude: 2.36766,
     },
@@ -34,7 +34,7 @@ export const friends = [
     name: "Alessia",
     surname: "Ciccarello",
     email: "alessiaciccarello@gmail.com",
-    location: {
+    coords: {
       latitude: 48.888657,
       longitude: 2.378072,
     },
@@ -50,7 +50,7 @@ export const friends = [
     name: "Ciccio",
     surname: "Belo",
     email: "cicciobelo@gmail.com",
-    location: {
+    coords: {
       latitude: 48.868575,
       longitude: 2.325545,
     },
@@ -66,7 +66,7 @@ export const friends = [
     name: "Santo",
     surname: "Terranova",
     email: "santoterranova@gmail.com",
-    location: {
+    coords: {
       latitude: 48.83261,
       longitude: 2.320518,
     },
@@ -82,7 +82,7 @@ export const friends = [
     name: "Damiano",
     surname: "Pulvirenti",
     email: "damianopulvirenti@gmail.com",
-    location: {
+    coords: {
       latitude: 48.871053,
       longitude: 2.343012,
     },
@@ -98,7 +98,7 @@ export const friends = [
     name: "Enrico",
     surname: "Bruno",
     email: "enricobruno@gmail.com",
-    location: {
+    coords: {
       latitude: 48.847302,
       longitude: 2.314699,
     },
